@@ -1,24 +1,52 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+    let [counter,setCounter] = useState(15)
+
+    // let counter =0;
+
+    /*
+    function addvalue()
+    {
+      // console.log(counter);
+      counter=counter+1;
+      console.log(counter);
+    }
+      */
+
+    let addvalue =() =>{
+      // counter = counter+1;
+      // console.log(counter);
+      if(counter!=20)
+        {
+          counter= counter+1;
+        }
+      setCounter(counter);
+    }
+    let removevalue =() =>{
+      if(counter!=0)
+        {
+          counter = counter-1;
+        }
+      setCounter(counter);
+    }
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    < >
+        <h1>This is hooks Concept</h1>
+
+        <h2>Counter value : {counter}</h2>
+
+        <button onClick={addvalue}>Add</button>
+        <br />
+        <br />
+        <br />
+        <button onClick={removevalue}>Remove</button>
+
+    </>
   );
 }
 

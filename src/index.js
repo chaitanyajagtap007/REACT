@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Car from './Car';
 import reportWebVitals from './reportWebVitals';
+import Nav from './Components/Nav';
+import Slider from './Components/Slider';
+import About from './Components/About';
+import Gallery from './Components/Gallery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <Car/> */}
+
+    <Nav/>
+    <Slider/>
+    <About/>
+    <Gallery/>
+
   </React.StrictMode>
 );
 
